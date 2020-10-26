@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "3d3f82bb-9ad7-4db2-ad1c-b0495125e964",
+		"name": "Rencana Pekerjaan Harian",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create List Pekerjaan Harian",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_pekerjaan\" : \"Makan-makan\",\r\n    \"tanggal_perkerjaan\" : \"2020-07-29T17:00:00.000+00:00\",\r\n    \"komentar\" : \"tolong lebih banyak lagi makannya\",\r\n    \"status\" : \"done\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/listpekerjaan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"listpekerjaan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read List Pekerjaan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/listpekerjaan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"listpekerjaan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update List Pekerjaan",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_pekerjaan\" : \"Mainten PC\",\r\n    \"tanggal_perkerjaan\" : \"2020-07-29T17:00:00.000+00:00\",\r\n    \"komentar\" : \"tolong dipercepat\",\r\n    \"status\" : \"done\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/listpekerjaan/5f95862bb298790768422d98",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"listpekerjaan",
+						"5f95862bb298790768422d98"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete List Pekerjaan",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/listpekerjaan/5f958bade05eaf2cd8fbceb1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"listpekerjaan",
+						"5f958bade05eaf2cd8fbceb1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Status Done",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/listpekerjaan/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"listpekerjaan",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
